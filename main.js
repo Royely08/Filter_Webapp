@@ -24,7 +24,7 @@ function draw(){
     //fill(255,0,0);
     //stroke(0,0,0);
     //circle(moustacheX,moustacheY,20);
-    image(moustache_face,moustacheX,moustacheY,30,30);
+    image(moustache_face,moustacheX,moustacheY,60,60);
 }
 
 function take_snapshot(){
@@ -38,8 +38,8 @@ function modelLoaded(){
 function gotPoses(results){
     if(results.length>0){
         console.log(results);
-        noseX =  results[0].pose.nose.x - 15;
-        noseY =  results[0].pose.nose.y - 15;
+        moustacheX =  results[0].pose.nose.x - 25;
+        moustacheY =  results[0].pose.nose.y;
         console.log("moustache X = " + moustacheX);
         console.log("moustache Y = " + moustacheY );
     }
